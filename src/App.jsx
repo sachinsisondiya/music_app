@@ -1,13 +1,15 @@
-
+import Home from './screen/home'
 import './App.css'
 
 function App() {
   
 
   return (
-    <>
-      <div>hello world</div>        
-    </>
+    
+     <div>
+     <Home/>
+     </div>    
+    
   )
 }
 
