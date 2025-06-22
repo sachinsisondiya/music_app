@@ -1,6 +1,6 @@
 const Favorites = () =>{
   return(
-    <div>
+    <div className="screen-container">
       favorates
     </div>
   )

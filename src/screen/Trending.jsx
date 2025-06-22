@@ -1,6 +1,6 @@
  const Trending= ()=>{
   return (
-    <div>
+    <div className="screen-container">
       Trending
     </div>
   )

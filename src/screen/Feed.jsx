@@ -1,6 +1,6 @@
  const Feed = ()=>{
   return(
-    <div>
+    <div className="screen-container">
       Feed
     </div>
   )
