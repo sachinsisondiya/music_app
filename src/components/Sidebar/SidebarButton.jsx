@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import { IconContext } from "react-icons";
 const SidebarButton = ({title,to,icon}) => {
   const location = useLocation();
-  console.log(location);
+  
 
   const isActive = location.pathname === to;
 

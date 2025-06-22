@@ -6,6 +6,7 @@ import { MdVideoLibrary } from "react-icons/md";
 import { LuPlay } from "react-icons/lu";
 import { MdOutlineFavorite } from "react-icons/md";
 import { LuLogOut } from "react-icons/lu";
+import { FaFileUpload } from "react-icons/fa";
 
 
 const Sidebar =() =>{
@@ -15,7 +16,7 @@ const Sidebar =() =>{
 
       <div>
         <SidebarButton title="Feed" to="/feed" icon={ <MdDynamicFeed />}/>
-        <SidebarButton  title="Trending" to="/trending" icon={ <IoMdTrendingUp />}/>
+        <SidebarButton  title="Upload" to="/upload" icon={ <FaFileUpload />}/>
         <SidebarButton title="Library" to="/" icon={ <MdVideoLibrary />}/>
         <SidebarButton title="Player" to="/player" icon={<LuPlay />}/>
         <SidebarButton title="Favorites" to="/favorites" icon={ <MdOutlineFavorite />}/>

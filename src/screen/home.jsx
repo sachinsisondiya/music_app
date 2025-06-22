@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router,Route, Routes } from "react-router-dom";
 import Library from "./Library";
-import  Trending  from "./Trending";
+import  Upload  from "./Upload";
 import  Feed  from "./Feed";
 import  Player  from "./Player";
 import Favorites from "./Favorites";
@@ -15,7 +15,7 @@ const Home=() =>{
          <Routes>
         <Route path="/" element= {<Library/>}/>
          <Route path="/feed" element= {<Feed/>}/>
-          <Route path="/trending" element= {<Trending/>}/>
+          <Route path="/upload" element= {<Upload/>}/>
            <Route path="/player" element= {<Player/>}/>
             <Route path="/favorites" element= {<Favorites/>}/>
 
