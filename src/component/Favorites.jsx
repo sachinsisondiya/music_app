@@ -1,6 +1,6 @@
 const Favorites = () =>{
   return (
-    <p>favorites</p>
+    <div>fav</div>
   )
 }
 export default Favorites;
