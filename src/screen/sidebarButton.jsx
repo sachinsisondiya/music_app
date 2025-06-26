@@ -1,13 +1,20 @@
 import '../screen/sidebarButton.css';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { IconContext } from 'react-icons';
-import { GrEbay } from 'react-icons/gr';
+
+
 const SidebarButton = ({title,to,icon})=>{
+  const location= useLocation();
+ 
+  const isActive = location.pathname == to;
+  const className= isActive ? "sidebutton active" :"sidebutton"; 
   return (
-    <Link to={to} className='link'>
+    <Link to={to} className={className}>
       <IconContext.Provider value={{size:"25px",color:"#E8E8E8"}}>
         <div className="sidebutton">
-      {icon} {title}
+      {icon}
+      <div className='title'>
+        {title}</div> 
     </div>
 
       </IconContext.Provider>

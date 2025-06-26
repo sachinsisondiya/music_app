@@ -1,6 +1,6 @@
 const Player = () =>{
   return(
-    <h3>Player</h3>
+    <div className="screen-container"></div>
   )
 }
 export default Player;

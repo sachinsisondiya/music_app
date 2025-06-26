@@ -1,6 +1,6 @@
 const Trending = () =>{
   return (
-    <h6>Trending</h6>
+    <div className="screen-container"></div>
   )
 }
 export default Trending;

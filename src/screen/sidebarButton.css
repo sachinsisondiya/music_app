@@ -1,13 +1,33 @@
 .sidebutton{
+
  height: 50px;
-    width: 62px;
+    width: 65px;
     display: flex;
     flex-direction: column;
-    margin: 0.4em;
+    margin: 0.2em;
     place-items: center;
-    color: whitesmoke;
     padding: 0.2em;
+    border-radius: 25px;
+    text-decoration: none;
+     color: rgb(233, 227, 230,0.8);
+     transition: all 0.4s ease;
+     background-color:rgba(244, 187, 146, 0.0) ;
+    
 }
-.link{
-  text-decoration: none;
+.title{
+  font-size: 13px;
+  font-weight: 400;
+ 
+  
+}
+.sidebutton.active{
+  color: #ffffff;
+  background-color: rgba(244, 187, 146, 1);
+  transform: scale(1.05);
+
+}
+.sidebutton:hover{
+  background-color:rgba(244, 187, 146, 1);
+  color: #ffffff;
+
 }

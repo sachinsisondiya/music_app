@@ -1,6 +1,6 @@
 const Favorites = () =>{
   return (
-    <div>fav</div>
+    <div className="screen-container"></div>
   )
 }
 export default Favorites;

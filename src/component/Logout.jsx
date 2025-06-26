@@ -1,6 +1,6 @@
 const Logout =() =>{
   return (
-    <h5>Logout</h5>
+    <div className="screen-container"></div>
   )
 }
 export default Logout;

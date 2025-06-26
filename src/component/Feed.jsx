@@ -1,6 +1,6 @@
 const Feed = ()=>{
   return(
-    <h2>Feed</h2>
+    <div className="screen-container"></div>
   )
 }
 export default Feed;

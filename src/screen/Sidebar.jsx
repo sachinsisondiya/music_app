@@ -14,7 +14,7 @@ const Sidebar= ()=>{
       <div>
         <SidebarButton title="Feed" to="/feed" icon={<MdDynamicFeed />}/>
         <SidebarButton title="Favorites" to="/favorites" icon={<MdOutlineFavorite />}/>
-        <SidebarButton title="Library" to="/library" icon={<MdVideoLibrary />}/>
+        <SidebarButton title="Library" to="/" icon={<MdVideoLibrary />}/>
         <SidebarButton title="Player" to="/player" icon={<MdLibraryMusic />}/>
         <SidebarButton title="Trending" to="/trending" icon={<FiTrendingUp />
 }/>
