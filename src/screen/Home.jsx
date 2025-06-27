@@ -1,6 +1,6 @@
 import { BrowserRouter ,Route,Routes } from "react-router-dom";
 import Player from "../component/Player";
-import Feed from "../component/Feed";
+import Upload from "../component/upload";
 import Library from "../component/Library";
 import Logout from "../component/Logout";
 import Trending from "../component/Trending";
@@ -15,7 +15,7 @@ const Home = () =>{
       <Sidebar></Sidebar>
       <Routes>
       <Route path="/"  element= {<Library/>}/>
-      <Route path="/feed"  element= {<Feed/>}/>
+      <Route path="/upload"  element= {<Upload/>}/>
        <Route path="/trending"  element= {<Trending/>}/>
         <Route path="/player"  element= {<Player/>}/>
          <Route path="/favorites"  element= {<Favorites/>}/>
