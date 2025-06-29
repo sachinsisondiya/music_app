@@ -1,12 +1,18 @@
 .play-list{
   width:100%;
-  height: 93%;
+  height: 100%;
   display: flex;
-  padding: 2%;
+  padding: 5%;
   flex-wrap: wrap;
-  overflow-y: auto;
+  overflow-y:hidden ;
   justify-content: space-between;
+  position: relative;
   
+background-color: #e5e5f7;
+opacity: 1;
+background-image: radial-gradient(circle at center center, #1f26ab, #e5e5f7), repeating-radial-gradient(circle at center center, #1f26ab, #1f26ab, 24px, transparent 48px, transparent 24px);
+background-blend-mode: multiply;
+
 }
 .play-card{
   display: flex;
@@ -31,7 +37,7 @@
   margin:1rem ;
   transform: scale(1.02);
   .music-title{
-    color: rgba(6, 241, 26, 0.329);
+    color: rgba(6, 241, 26, 0.836);
     font-size: 1.1em;
   }
   .icon{
@@ -58,7 +64,7 @@
   font-size: 1rem;
   margin: 0.2rem;
   position:relative;
-  color: rgb(159, 163, 167);
+  color: #989b9e;
   font-family: cursive;
 
 }
@@ -68,10 +74,12 @@
   
 }
 .icon{
+  background-color: rgb(1, 66, 45);
   font-size: 2rem;
-  color: rgb(133, 135, 138);
-   transition: all 1s ease;
+  color: #e5e5f7;
+   transition: all 0.5s ease;
     opacity: 0;
+    border-radius: 30px;
 }
 .icon:hover{
   background-color: rgb(97, 87, 87);
