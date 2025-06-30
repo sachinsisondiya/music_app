@@ -8,10 +8,7 @@
   justify-content: space-between;
   position: relative;
   
-background-color: #e5e5f7;
-opacity: 1;
-background-image: radial-gradient(circle at center center, #1f26ab, #e5e5f7), repeating-radial-gradient(circle at center center, #1f26ab, #1f26ab, 24px, transparent 48px, transparent 24px);
-background-blend-mode: multiply;
+
 
 }
 .play-card{
@@ -23,14 +20,14 @@ background-blend-mode: multiply;
   width: 15%;
   height: 35%;
   border-radius: 20px;
-  background-color: rgb(30, 42, 62);
-  border:1px solid rgb(54,69, 50,0.18);
+  background-color: rgba(6, 48, 122, 0.534);
+  border:1px solid rgba(160, 146, 146, 0.774);
   padding: 1%;
   margin-bottom: 20px;
-  background: rgb(30, 42, 62);
-  background: linear-gradient(rgb(40,58,88) 0%,rgba(54,69,98,0)100%);
+ 
   position: relative;
   min-width: 100px;
+  min-height: 100px;
   transition: all 0.2s ease;
 }
 .play-card:hover{
@@ -55,6 +52,8 @@ background-blend-mode: multiply;
   position: relative;
   border: 1px solid rgb(226, 6, 6);
   transition: all 0.3s ease-out;
+  min-width: 10%;
+  
 
 }
 .music-img:hover{
