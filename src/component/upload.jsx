@@ -30,6 +30,7 @@ const Upload = ()=>{
   const handleFileChange = (e) => {
   const selectedFiles = Array.from(e.target.files);
   setFiles(selectedFiles);
+  
 };
 
   const goToLibrary = () => {

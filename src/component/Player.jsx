@@ -1,17 +1,27 @@
 import { useLocation } from "react-router-dom";
+import { useEffect, useRef } from "react";
+import SongCard from "./Songcard";
 const Player = () =>{
   const location = useLocation();
-  if(location.state) {console.log(location.state)}
+  console.log(location.state)
+   const musicRef= useRef(null);
+   useEffect(()=>{
+    if(location.state){
+      console.log(musicRef.current)
+    }
 
-  const playMusic=()=>{
-    console.log()
-  }
+   },[location.state])
+
+ 
+ 
+  
   return(
     <div className="screen-container">
-      <div>
+      <div className="left-player-body">
 
       </div>
-      <div>
+      <div className="right-player-body">
+        <SongCard></SongCard>
 
       </div>
     </div>

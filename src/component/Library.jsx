@@ -28,7 +28,9 @@ const Library = ()=>{
 
         ))}</div>
 
-      ) : (<div> no files uploaded</div>)}  
+      ) : (<div className="contain"> <div className="upload-files"> no files uploaded
+       <p>go to upload</p></div> 
+     </div>)}  
      
     </div>
   )
