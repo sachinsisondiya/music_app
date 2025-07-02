@@ -1,0 +1,8 @@
+const AlbumInfo= ()=>{
+  return (
+    <div>
+      info
+    </div>
+  )
+}
+export default AlbumInfo;

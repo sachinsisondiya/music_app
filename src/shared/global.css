@@ -4,11 +4,17 @@ width: calc(100% - 100px);
 height: 100%;
 background-color: #1E2A3E;
 border-radius: 30px;
-
-
 background-color: #e5e5f7;
 opacity: 0.8;
 background-image: radial-gradient(circle at center center, #030872, #2c2c7294), repeating-radial-gradient(circle at center left, #01065a, #1f26ab9a, 24px, transparent 48px, transparent 24px);
 background-blend-mode: multiply;
+background-attachment: local;
+background-size: cover;
+background-position: center,center,center,left;
+background-repeat: no-repeat;
 
+}
+
+.flex{
+  display:flex;
 }
