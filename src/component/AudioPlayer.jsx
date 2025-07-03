@@ -3,9 +3,9 @@ import ProgressCircle from "./ProgressCircle";
 const AudioPlayer=()=>{
   return(
     <div className="player-body">
-      <div className="player-left-body">
+      <div className="player-left-body flex">
         <ProgressCircle
-        percentage="75%"
+        percentage={75}
         isPlaying={true}
         size={300}
         color="#C96850"></ProgressCircle>
