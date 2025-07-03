@@ -1,0 +1,28 @@
+.album-container{
+  margin: 20px;
+  width: 70%;
+  place-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+
+}
+.album-container p{
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+.marque{
+
+  white-space: nowrap;
+  display: inline-block;
+  animation: marque 12s linear infinite ;
+  padding-left: 30%;
+}
+@keyframes marque {
+  0%{
+    transform: translateX(100%);
+  }
+  100%{
+    transform: translateX(-100%);
+  }
+}

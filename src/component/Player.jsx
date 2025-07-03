@@ -23,7 +23,7 @@ const Player = () =>{
 
       </div>
       <div className="right-player-body">
-        <SongCard album={setname}></SongCard>
+        <SongCard album={location.state}></SongCard>
 
       </div>
     </div>

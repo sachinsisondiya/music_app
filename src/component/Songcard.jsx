@@ -2,11 +2,10 @@ import AlbumInfo from "./AlbumInfo";
 import AlbumImage from "./AlbumImage";
 import "./Songcard.css";
 const SongCard= ({album})=>{
-  console.log(album);
   return(
-    <div className="songcard">
-      <AlbumImage></AlbumImage>
-      <AlbumInfo></AlbumInfo>
+    <div className="songcard flex">
+      <AlbumImage ></AlbumImage>
+      <AlbumInfo im={album.id.name}></AlbumInfo>
     </div>
   )
 }

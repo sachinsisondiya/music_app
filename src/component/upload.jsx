@@ -59,7 +59,7 @@ const Upload = ()=>{
     </div>
     <div className="list-main"> {files.length > 0 && (
         <ul className="list">
-          {files.map((file, i) => (
+          {files.map((file, i) => (  
             <li key={i}>{file.name}</li>
           ))}
         </ul>)}

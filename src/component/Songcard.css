@@ -3,6 +3,9 @@
   height: 60%;
   background-color:#0f25a3e7 ;
   border-radius: 30px;
+  flex-direction: column;
   border-bottom-right-radius: 0px;
+  place-items: center;
+  justify-content: center;
 
 }

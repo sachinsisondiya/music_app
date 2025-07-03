@@ -1,7 +1,12 @@
-const AlbumInfo= ()=>{
+import "./Albuminfo.css";
+const AlbumInfo= ({im})=>{
   return (
-    <div>
-      info
+    <div className="album-container">
+      <div className="marque">
+            <p>{im}</p>
+      </div>
+     
+      
     </div>
   )
 }
