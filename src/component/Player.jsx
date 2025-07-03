@@ -7,13 +7,7 @@ const Player = () =>{
   const location = useLocation();
   console.log(location.state)
    const musicRef= useRef(null);
-   const [name,setname]=useState([]);
-   useEffect(()=>{
-    if(location.state){
-      console.log(musicRef.current)
-    }
-
-   },[location.state])
+ 
 
  
  
