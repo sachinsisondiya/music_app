@@ -2,7 +2,7 @@ import "./AudioPlayer.css"
 import ProgressCircle from "./ProgressCircle";
 import WaveAnimation from "./WaveAnimation";
 import Controls from "./Controls";
-const AudioPlayer=({name})=>{
+const AudioPlayer=({name,isPlaying})=>{
   return(
     <div className="player-body flex">
       <div className="player-left-body flex">
@@ -19,7 +19,7 @@ const AudioPlayer=({name})=>{
         <div className="player-right-bottom flex">
           <div className="song-duration flex">
             <p className="duration">0:01</p>
-            <WaveAnimation/>
+            <WaveAnimation isPlaying={true}/>
              <p className="duration">0:30</p>
           </div>
 

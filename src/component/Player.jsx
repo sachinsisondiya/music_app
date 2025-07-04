@@ -15,7 +15,7 @@ const Player = () =>{
   return(
     <div className="screen-container flex">
       <div className="left-player-body">
-        <AudioPlayer name={location.state}></AudioPlayer>
+        <AudioPlayer name={location.state} isPlaying={true}></AudioPlayer>
 
       </div>
       <div className="right-player-body">
