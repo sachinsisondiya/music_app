@@ -5,13 +5,7 @@ import './Player.css'
 import AudioPlayer from "./AudioPlayer";
 const Player = () =>{
   const location = useLocation();
-  console.log(location.state)
    const musicRef= useRef(null);
- 
-
- 
- 
-  
   return(
     <div className="screen-container flex">
       <div className="left-player-body">
