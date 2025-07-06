@@ -3,7 +3,8 @@ import ProgressCircle from "./ProgressCircle";
 import WaveAnimation from "./WaveAnimation";
 import Controls from "./Controls";
 import { useRef,useState,useEffect } from "react";
-const AudioPlayer=({name,isPlaying})=>{
+const AudioPlayer=({name})=>{
+  const [isPlaying,setIsPlaying]=useState(false);
   const audioRef = useRef(null);
   const [audioUrl, setAudioUrl] = useState(null);
   const [trackProgress,setTrackProgress]=useState(0);
@@ -41,8 +42,9 @@ const AudioPlayer=({name,isPlaying})=>{
   const handlePlay = () => {
     if (audioRef.current) {
       audioRef.current.play();
-      isPlaying=true;
+      setIsPlaying(true);
       startTimer();
+    
     
     }
   };
@@ -50,7 +52,7 @@ const AudioPlayer=({name,isPlaying})=>{
   const handlePause = () => {
     if (audioRef.current) {
       audioRef.current.pause();
-      isPlaying=false;
+      setIsPlaying(false);
       clearInterval(interValRef.current);
     }
   };
@@ -60,8 +62,9 @@ const AudioPlayer=({name,isPlaying})=>{
 
     interValRef.current= setInterval(()=>{
       if(audioRef.current.ended){
-        audio.Ref.current.play();
+        audioRef.current.play();
         clearInterval(interValRef.current);
+        setTrackProgress(0);
       }
       else{
         setTrackProgress(audioRef.current.currentTime);
@@ -87,8 +90,8 @@ const AudioPlayer=({name,isPlaying})=>{
         </p>
         <div className="player-right-bottom flex">
           <div className="song-duration flex">
-            <p className="duration">0:{Math.round(trackProgress)}</p>
-            <WaveAnimation isPlaying={true}/>
+            <p className="duration">{formatTime(trackProgress)}</p>
+            <WaveAnimation isPlaying={isPlaying}/>
              <p className="duration">{formatTime(endDuration)}</p>
           </div>
               {audioUrl && (
@@ -101,6 +104,7 @@ const AudioPlayer=({name,isPlaying})=>{
       )}
             <Controls handlePause={handlePause}
             handlePlay={handlePlay}
+            isPlaying={isPlaying}
             />
         </div>
         

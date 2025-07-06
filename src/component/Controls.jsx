@@ -1,15 +1,23 @@
-import { useRef, useEffect, useState } from 'react';
 import './Control.css';
+import { CiPlay1 } from "react-icons/ci";
 
-const Controls = ({handlePause,handlePlay} ) => {
- 
-  
-
+const Controls = ({handlePause,handlePlay,isPlaying} ) => {
   return (
-    <div className="controls-container">
-     
-      <button onClick={handlePlay}>Play</button>
-      <button onClick={handlePause}>Pause</button>
+    <div className="controls-container flex">
+      <div className=
+      {
+        isPlaying ? "play-pause-btn flex active-n":"play-pause-btn flex active-n"
+      }
+      onClick={()=>{
+         if (isPlaying) {
+            handlePause();
+          } else {
+            handlePlay();
+          }
+      }}  
+      >
+        <CiPlay1 className='i'/>
+      </div>
     </div>
   );
 };
