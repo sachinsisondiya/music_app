@@ -1,5 +1,6 @@
 import './Control.css';
 import { CiPlay1 } from "react-icons/ci";
+import { CiPause1 } from "react-icons/ci";
 
 const Controls = ({handlePause,handlePlay,isPlaying} ) => {
   return (
@@ -16,7 +17,8 @@ const Controls = ({handlePause,handlePlay,isPlaying} ) => {
           }
       }}  
       >
-        <CiPlay1 className='i'/>
+        {isPlaying ? <CiPause1 className='p' />:<CiPlay1 className='i'/>
+           }
       </div>
     </div>
   );
