@@ -6,9 +6,23 @@ import { useRef,useState,useEffect } from "react";
 const AudioPlayer=({name,isPlaying})=>{
   const audioRef = useRef(null);
   const [audioUrl, setAudioUrl] = useState(null);
+  const [trackProgress,setTrackProgress]=useState(0);
+  const interValRef =useRef();
+
+  const [endDuration, setEndDuration]=useState(0);
+
+  const formatTime = (time) => {
+  const minutes = Math.floor(time / 60);
+  const seconds = Math.floor(time % 60)
+    .toString()
+    .padStart(2, '0');
+  return `${minutes}:${seconds}`;
+};
+
+
 
   const duration= audioRef.current?.duration;
-  console.log(duration);
+  const currPersentage = duration ? (trackProgress / duration)* 100 :0;
   
  
 
@@ -17,7 +31,6 @@ const AudioPlayer=({name,isPlaying})=>{
     if (name?.id) {
       const url = URL.createObjectURL(name.id);
       setAudioUrl(url);
-      console.log(url)
 
       return () => {
         URL.revokeObjectURL(url); // Clean up memory
@@ -28,23 +41,43 @@ const AudioPlayer=({name,isPlaying})=>{
   const handlePlay = () => {
     if (audioRef.current) {
       audioRef.current.play();
+      isPlaying=true;
+      startTimer();
+    
     }
   };
 
   const handlePause = () => {
     if (audioRef.current) {
       audioRef.current.pause();
+      isPlaying=false;
+      clearInterval(interValRef.current);
     }
   };
 
+  const startTimer =()=>{
+    clearInterval(interValRef.current);
 
+    interValRef.current= setInterval(()=>{
+      if(audioRef.current.ended){
+        audio.Ref.current.play();
+        clearInterval(interValRef.current);
+      }
+      else{
+        setTrackProgress(audioRef.current.currentTime);
+      }
+
+    },1000);
+  };
+
+// start timer is complete
 
   return(
     <div className="player-body flex">
       <div className="player-left-body flex">
         <ProgressCircle
-        percentage={75}
-        isPlaying={true}
+        percentage={currPersentage}
+        isPlaying={isPlaying}
         size={300}
         color="#C96850"></ProgressCircle>
       </div>
@@ -54,12 +87,17 @@ const AudioPlayer=({name,isPlaying})=>{
         </p>
         <div className="player-right-bottom flex">
           <div className="song-duration flex">
-            <p className="duration">0:01</p>
+            <p className="duration">0:{Math.round(trackProgress)}</p>
             <WaveAnimation isPlaying={true}/>
-             <p className="duration">0:30</p>
+             <p className="duration">{formatTime(endDuration)}</p>
           </div>
               {audioUrl && (
-        <audio ref={audioRef} src= {audioUrl} />
+        <audio ref={audioRef} src= {audioUrl} 
+          onLoadedMetadata={()=>{
+            if(audioRef.current){
+              setEndDuration(audioRef.current.duration);
+            }
+          }}/>
       )}
             <Controls handlePause={handlePause}
             handlePlay={handlePlay}
