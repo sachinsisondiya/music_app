@@ -5,7 +5,7 @@ const SongCard= ({album})=>{
   return(
     <div className="songcard flex">
       <AlbumImage ></AlbumImage>
-      <AlbumInfo im={album.id.name}></AlbumInfo>
+      <AlbumInfo im={album?.id?.name }></AlbumInfo>
     </div>
   )
 }

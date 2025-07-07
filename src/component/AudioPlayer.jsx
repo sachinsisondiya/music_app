@@ -86,7 +86,7 @@ const AudioPlayer=({name})=>{
       </div>
       <div className="player-right-body flex">
         <p className="song-title">
-          {name.id.name}
+          {name?.id?.name || "no song selected" }
         </p>
         <div className="player-right-bottom flex">
           <div className="song-duration flex">
