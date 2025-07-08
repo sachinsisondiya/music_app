@@ -60,10 +60,11 @@ const Upload = ()=>{
     <div className="list-main"> {files.length > 0 && (
         <ul className="list">
           {files.map((file, i) => (  
-            <li key={i}>{file.name}</li>
+            <li key={i} className='li'>{file.name}</li>
           ))}
         </ul>)}
-        <button
+      </div>
+       <button
           className="btn btn-primary new"
           type="button"
           onClick={goToLibrary}
@@ -71,8 +72,6 @@ const Upload = ()=>{
         >
           Go to Library
         </button>
-     
-      </div>
     
     </div>
   )

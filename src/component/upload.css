@@ -1,11 +1,21 @@
+@font-face{
+  src: url("/src/shared/Gothess.ttf");
+  font-family: "Gothess";
+  
+}
 .upload{
-  background: url(https://static.vecteezy.com/system/resources/previews/037/044/052/non_2x/ai-generated-studio-shot-of-black-headphones-over-music-note-explosion-background-with-empty-space-for-text-photo.jpg);
+  background: url("https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzFpbzBjZGIyejR5dDBsMmFndHNncnhtNmM4ODBhZ204ZXJuYmE0YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l3q2BBMYr0in7XmTu/giphy.gif");
   height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
   place-items: center;
   flex: wrap;
+  overflow-y: auto;
+  background-size: cover;
+  
+  
+  
 
   
 }
@@ -13,41 +23,59 @@
   margin:2em;
   display: grid;
   place-items: center;
-  background-color: rgba(115, 115, 185, 0.788);
+  background-color: rgba(245, 245, 245, 0.829);
   padding: 2em;
-  border: 2px dotted maroon;
+  border:none;
 
   min-width: 10em;
-  min-height: 5em;
+  min-height: 11em;
 
   border-radius: 30px;
+  text-shadow: 5px 5px 10px black;
 
 }
 .input{
   background-color: rgb(201, 194, 207);
  
   display:none;
-  
-  
 }
 .heading{
+  text-align: center;
   margin:0;
-  font-size: 2em;
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  font-family: "Gothess";
   font-weight: 500;
-  color: rgba(231, 209, 211, 0.829);
+  color: black;
+  font-weight: 500;
   
 }
 .list-main{
+  width: 50%;
   color:#e7d1d3d3 ;
-  margin: 1em;
-  padding: 2em;
-  background-color: rgba(165, 42, 42, 0.425);
-  height: 50%;
+  padding: 1rem;
+  background-color:#201E50;
+  height: 40%;
+  overflow-y: auto;
+  border-radius: 30px;
+  scrollbar-width: none;
 
 }
 .list{
+   font-family: "Gothess";
   color:#e7d1d3d3 ;
   font-size: medium;
-  background-color: rgba(138, 165, 42, 0.548);
+
+  
+  
 }
+.li{
+  
+  background-color: #525B76;
+  text-align: center;
+  margin: 4px 4px;
+  border-radius: 30px;
+  color: hsl(0, 0%, 97%);
+  border:1px solid blue ;
+  text-shadow: 0 0  1px black;
+}
+

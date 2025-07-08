@@ -11,7 +11,7 @@ const Sidebar= ()=>{
     <div className={styles.sidebar}>
       <img src="https://png.pngtree.com/png-clipart/20230927/original/pngtree-man-avatar-image-for-profile-png-image_13001877.png" alt="profile picture" className={styles.profile}/>
 
-      <div>
+      <div className="menu">
         <SidebarButton title="Upload" to="/upload" icon={<RiContactsBookUploadFill />}/>
         <SidebarButton title="Favorites" to="/favorites" icon={<MdOutlineFavorite />}/>
         <SidebarButton title="Library" to="/" icon={<MdVideoLibrary />}/>
