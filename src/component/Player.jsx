@@ -7,7 +7,7 @@ const Player = () =>{
   const location = useLocation();
    const musicRef= useRef(null);
   return(
-    <div className="screen-container flex">
+    <div className="screen-container flex full-player">
       <div className="left-player-body">
         <AudioPlayer name={location.state} isPlaying={true}></AudioPlayer>
 

@@ -7,7 +7,7 @@
 }
 .box{
   transform: scale(0.4);
-  background: linear-gradient(90deg, #fcff9e 0%, #c67700 100%);
+  background: rgb(2, 114, 45);
   
   height: 100%;
   width: var(--boxSize);

@@ -17,7 +17,7 @@ const Library = ()=>{
         <div className="play-list"> 
         {files.map((file,i) =>(
           <div key={i} className="play-card">
-            <img src="https://static.vecteezy.com/system/resources/previews/000/546/041/original/music-notes-vector-icon.jpg" alt="music cover potos" className="music-img"/>
+           <div className="music-img" role="img" aria-label=" animated cartoon who are listening the song"></div>
             <p className="music-title">
               {file.name}
             </p>
@@ -29,7 +29,7 @@ const Library = ()=>{
         ))}</div>
 
       ) : (<div className="contain"> <div className="upload-files"> no files uploaded
-       <p>go to upload</p></div> 
+       <p className="reminder">go to upload</p></div> 
      </div>)}  
      
     </div>

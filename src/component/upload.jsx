@@ -65,7 +65,8 @@ const Upload = ()=>{
         </ul>)}
       </div>
        <button
-          className="btn btn-primary new"
+          className="btn btn-primary "
+          id="new"
           type="button"
           onClick={goToLibrary}
           disabled={files.length === 0}

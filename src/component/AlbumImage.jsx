@@ -4,9 +4,9 @@ const AlbumImage= ()=>{
   return (
     <>
     <div className="albumImage flex">
-       <img src="https://www.pngitem.com/pimgs/m/268-2686308_music-listening-clip-art-listen-to-music-clipart.png" alt="image of music"  className="albumimge-art" />
+       <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbDgwZmNpdHNsN3RxYWFqYm51eGxsZHQ3c2E1YWUxcXFxNHM0dnFoaSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Hicydpti7wG3vA8Zr4/giphy.gif" alt="animated video in which person is dancing"  className="albumimge-art" />
         <div className="album-shadow">
-       <img src="https://www.pngitem.com/pimgs/m/268-2686308_music-listening-clip-art-listen-to-music-clipart.png" alt="image of music" />
+       <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbDgwZmNpdHNsN3RxYWFqYm51eGxsZHQ3c2E1YWUxcXFxNHM0dnFoaSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Hicydpti7wG3vA8Zr4/giphy.gif" alt="animated video in which person is dancing" />
 
     </div>
     </div>

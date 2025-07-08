@@ -1,3 +1,8 @@
+.full-player{
+  background: url("https://media.giphy.com/media/YREUFsDSzwwjP7vbS8/giphy.gif?cid=790b7611f7ca3d6e5a9db76571759ed09a981d79cbde32b8&ep=v1_user_favorites&rid=giphy.gif&ct=g");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .left-player-body{
   width:70%;
   margin-right:2% ;
@@ -9,4 +14,17 @@
   display: flex;
   flex-direction: column;
   justify-content:space-between ;
+}
+
+@media (max-width:700px) and (max-height: 600px) {
+  .full-player{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  .right-player-body{
+    display: none;
+  }
+  
 }
